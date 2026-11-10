@@ -7,8 +7,8 @@ organized notes, the student **reviews and corrects** them, then asks questions 
 
 ```bash
 pip install -r requirements.txt
-# put your key in .env  (copy .env.example to .env):   GOOGLE_API_KEY=...
-python -m streamlit run AI_whiteboard.py      # or: python -m streamlit run app.py
+# put your key in .env:   GOOGLE_API_KEY=your_key_here
+python -m streamlit run app.py
 python tests/test_parsing.py                   # optional: unit tests, no API calls
 ```
 
@@ -39,5 +39,5 @@ The app therefore asks your API key which models it can use and tries, in order:
 | Accurate mental model (L5) | States it is an AI, neutral tone, no simulated emotions |
 
 ## Files
-`app.py` UI · `gemini_service.py` Gemini calls, model selection, error handling · `schemas.py` structured output ·
-`styles.py` CSS · `config.py` settings and HAI text · `AI_whiteboard.py` entry point · `tests/` unit tests
+`app.py` UI & entry point · `gemini_service.py` Gemini calls, model selection, error handling · `schemas.py` structured output ·
+`styles.py` CSS · `config.py` settings and HAI text · `tests/` unit tests
